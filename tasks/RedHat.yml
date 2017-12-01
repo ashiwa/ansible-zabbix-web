@@ -16,7 +16,7 @@
 - name: "RedHat | Install zabbix-web-{{ database_type }}"
   yum:
     pkg: zabbix-web-{{ database_type }}
-    enablerepo: "remi,remi-php56"
+    enablerepo: remi-php56
     state: present
   tags:
     - zabbix-web
