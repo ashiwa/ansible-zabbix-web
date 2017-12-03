@@ -20,6 +20,14 @@
     state: present
   tags:
     - zabbix-web
+    
+- name: "RedHat | Install zabbix-web-japanese"
+  yum:
+    pkg: zabbix-web-japanese
+    enablerepo: "remi-php56"
+    state: present
+  tags:
+    - zabbix-web
 
 - name: "RedHat | Install apache vhost"
   template:
