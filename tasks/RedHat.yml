@@ -13,10 +13,17 @@
   tags:
     - zabbix-web
 
+- name: install remi repository
+  yum:
+    name: "{{ zabbix_repo_remi.rpmurl }}"
+    state: installed
+  tags:
+    - zabbix-web
+
 - name: "RedHat | Install zabbix-web-{{ database_type }}"
   yum:
     pkg: zabbix-web-{{ database_type }}
-    enablerepo: remi-php56
+    enablerepo: remi-php56,remi
     state: present
   tags:
     - zabbix-web

@@ -29,6 +29,9 @@ zabbix_repo_yum:
     gpgcheck: 0
     gpgkey: file:///etc/pki/rpm-gpg/RPM-GPG-KEY-ZABBIX
     state: present
+    
+zabbix_repo_remi:
+  - rpmurl: http://rpms.famillecollet.com/enterprise/remi-release-7.rpm
 
 zabbix_web_max_execution_time: 300
 zabbix_web_memory_limit: 128M
