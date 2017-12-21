@@ -15,7 +15,7 @@
 
 - name: install remi repository
   yum:
-    name: "{{ zabbix_repo_remi.rpmurl }}"
+    name: "{{ zabbix_repo_remi_rpmurl }}"
     state: installed
   tags:
     - zabbix-web
